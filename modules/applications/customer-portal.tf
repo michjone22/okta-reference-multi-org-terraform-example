@@ -31,3 +31,11 @@ resource "okta_app_oauth" "example" {
   skip_groups = true
   refresh_token_leeway = 60
 }
+
+resource "okta_auth_server" "test_server" {
+  audiences = ["api://iatcore.com"] 
+  description = "Auth Server that handles test apps" 
+  name = "Test Server" 
+  issuer_mode = "ORG_URL" 
+  status = "ACTIVE" 
+}
