@@ -13,4 +13,5 @@ resource "okta_app_oauth" "customer_portal" {
   refresh_token_rotation = "ROTATE"
   skip_users = true
   skip_groups = true
+  refresh_token_leeway = 60
 }
