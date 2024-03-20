@@ -10,6 +10,6 @@ resource "okta_group_rule" "test_rule" {
   name = "Test Rule" 
   status = "ACTIVE" 
   group_assignments = ["${okta_group.test_group.id}"] 
-  expression_type = "urn:okta:expression:1.0" 
-  expression_value = "String.startsWith(user.firstName,"somename")" 
+  expression_type = "urn:okta:expression:1.0"
+  expression_value = "String.startsWith(user.firstName,\"somename\")"
 }
