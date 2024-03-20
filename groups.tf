@@ -9,6 +9,6 @@ resource "okta_group" "dmzadmin_group" {
 }
 
 resource "okta_group" "test_group" { 
-  name ="Test Group" 
+  name ="Renamed Test Group" 
   description = "For testing and demonstration"
 }
