@@ -39,3 +39,9 @@ resource "okta_auth_server" "test_server" {
   issuer_mode = "ORG_URL" 
   status = "ACTIVE" 
 }
+
+resource "okta_auth_server_scope" "test_scope" { 
+  auth_server_id = okta_auth_server.test_server.id
+  description = "This allows the test server to view your IATCore account information." 
+  name = "iat.account.read" 
+}
