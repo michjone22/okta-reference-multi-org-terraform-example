@@ -17,3 +17,10 @@ resource "okta_user_schema_property" "clientId" {
   scope       = "SELF"
   permissions = "READ_WRITE"
 }
+
+resource "okta_user_schema_property" "crn_extension" {
+  index = "customer_reference_number" 
+  title = "Customer Reference Number" 
+  required = false type = "string" 
+  master ="PROFILE_MASTER" 
+}
