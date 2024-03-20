@@ -7,3 +7,8 @@ resource "okta_group" "dmzadmin_group" {
     name = "DMZ Server Admins"
     description = "Group that contains employees that are responsible for DMZ Servers"
 }
+
+resource "okta_group" "test_group" { 
+  name ="Test Group" 
+  description = "For testing and demonstration"
+}
