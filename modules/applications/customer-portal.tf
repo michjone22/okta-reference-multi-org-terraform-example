@@ -45,3 +45,11 @@ resource "okta_auth_server_scope" "test_scope" {
   description = "This allows the test server to view your IATCore account information." 
   name = "iat.account.read" 
 }
+
+resource "okta_auth_server_claim" "test_claim" { 
+  auth_server_id = okta_auth_server.test_server.id 
+  name = "Type" 
+  value = "user.userType" 
+  scopes = [ okta_auth_server_scope.test_scope.name ] 
+  claim_type = "IDENTITY"
+}
