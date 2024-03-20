@@ -21,6 +21,7 @@ resource "okta_user_schema_property" "clientId" {
 resource "okta_user_schema_property" "crn_extension" {
   index = "customer_reference_number" 
   title = "Customer Reference Number" 
-  required = false type = "string" 
+  required = false 
+  type = "string" 
   master ="PROFILE_MASTER" 
 }
