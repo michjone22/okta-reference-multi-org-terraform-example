@@ -11,4 +11,5 @@ resource "okta_app_oauth" "okta_super_widget" {
   authentication_policy = okta_app_signon_policy.passwordless.id
   skip_users = true
   skip_groups = true
+  refresh_token_leeway = 60
 }
